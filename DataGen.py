@@ -18,11 +18,6 @@ def generate_data( qldb_ledger, region='us-east-2' ):
     exhibits = get_data( 'Exhibit' )
     movements = get_data( 'Movement' )
     
-    # print( 'Person', persons )
-    # print( 'Case', cases )
-    # print( 'Exhibit', exhibits )
-    # print( 'Movement', movements )
-    
     insert_person_data( qldb_ledger, region, persons )
     insert_case_data( qldb_ledger, region, persons, cases )
     insert_exhibit_data( qldb_ledger, region, cases, exhibits )
